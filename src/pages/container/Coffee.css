@@ -62,7 +62,6 @@
 #select ul li{
     font-size: 14px;
     color: #444;
-    float: left;
     margin-right: 30px;
     font-weight: normal;
     margin-bottom: 10px;
@@ -80,24 +79,27 @@
 
 }
 .coffeecss{
-    height: 800px;
+    height: auto;
 }
 .coffeecss2{
-    height: 400px;
+    height: auto;
 }
 .coffeecss{
     margin-top: 15px;
     width: 100%;
+    height: auto;
 }
 
 .coldbrewitem{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    height: auto;
+
 }
 .coldbrewitem >div{
     width: 25%;
-
+    height: auto;
     padding: 0 1%;
 }
 .coldbrewitem >div img{

@@ -6,9 +6,9 @@ import { API_URL } from '../../config/apiurl';
 import { getEso } from '../../modules/special';
 import Esopressitem from './Esopressitem';
 
-const Esopress = () => {
+const Esopress = ({text}) => {
     const CPSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/esopress`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.special.eso);

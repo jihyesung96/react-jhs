@@ -57,14 +57,14 @@ const onChange = (e) => {
                         <li><input type="checkbox" onChange={()=>setCoffee7(!coffee7)}/><label>티(티바나)</label></li> 
                     </ul>
                     <div className='menuview'>
-                        { coffee && <Coldbrew/> }
-                        { coffee1 && <Brewdcoffee/>}
-                        { coffee2 && <Esopress/>}
-                        { coffee3 &&<Frapp/>}
-                        { coffee4 && <Blend/> }
-                        { coffee5 && <Refres/> }
-                        { coffee6 && <Fizzio/> }
-                        { coffee7 && <Tea/> }
+                        { coffee && <Coldbrew text="콜드 브루"/> }
+                        { coffee1 && <Brewdcoffee text="브루드 커피"/>}
+                        { coffee2 && <Esopress text="에스프레소"/>}
+                        { coffee3 &&<Frapp text="프라푸치노"/>}
+                        { coffee4 && <Blend text="블렌디드"/> }
+                        { coffee5 && <Refres text="AW 리프레셔"/> }
+                        { coffee6 && <Fizzio text="AW 피지오"/> }
+                        { coffee7 && <Tea text="티(티바나)"/> }
                     </div>
                 </div>
 

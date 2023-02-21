@@ -95,9 +95,7 @@ const Header = () => {
                             <li>Find a Store</li>
                             { isLogin && username === 'admin' ? 
                             <>
-                            <li className='coffeeadd'><Link to='/Writecoffee'>음료등록</Link></li> 
-                            <li className='foodadd'><Link to='/Writefood'>음식등록</Link></li> 
-                            <li className='productadd'><Link to='/Writeproduct'>상품등록</Link></li> 
+                            <li className='coffeeadd'><Link to='/Write'>제품등록</Link></li>
                             </>
                             :null}
                             <li id='icon'><img src='images/icon_magnifier_black.png' alt=''></img></li>

@@ -8,9 +8,9 @@ import Refresitem from './Refresitem';
 
 
 
-const Refres = () => {
+const Refres = ({text}) => {
     const CPData = async () => {
-    const data = await axios.get(`${API_URL}/AW/refres`);
+    const data = await axios.get(`${API_URL}/AW/${text}`);
     return data;
     }
     CPData();

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import Title from '../components/Title';
 import { API_URL } from '../config/apiurl';
+import './WriteCoffee.css';
 
 const Writepage = () => {
     const [formData,setFormData] = useState({
@@ -9,7 +10,13 @@ const Writepage = () => {
         w_bigcategory: "coffee",
         w_category: "",
         w_img: "",
-        w_price: ""
+        w_price: "",
+        w_capacity:null,
+        w_amount:null,
+        w_fat:null,
+        w_sugars:null,
+        w_caffeine: null,
+        w_desc:""
     })
     const onChange = (e) =>{
         const { name , value } = e.target;
@@ -44,6 +51,19 @@ const Writepage = () => {
         e.preventDefault();
         //인풋체크후 addEvnet 호출
         addAW();
+        setFormData({
+            w_name: "",
+            w_bigcategory: "coffee",
+            w_category: "",
+            w_img: "",
+            w_price: "",
+            w_capacity:null,
+            w_amount:null,
+            w_fat:null,
+            w_sugars:null,
+            w_caffeine: null,
+            w_desc:""
+        });
 
     }
     const addAW = () => {
@@ -56,8 +76,9 @@ const Writepage = () => {
     return (
         <div id="Writecoffee">
             <Title title="AW ADD " desc="메뉴 및 상품을 추가해주세요 !"/>
+            <div>
             <form onSubmit={onSubmit}>
-                <table className='defaulttablemenu'>
+                <table className='writetable'>
                     <tbody>
                         <tr className='menuname'>
                             <td >Name</td>
@@ -68,7 +89,7 @@ const Writepage = () => {
                         </tr>
                         <tr>
                             <td>Category</td>
-                            <select name='w_bigcategory' onChange={onChange} value={formData.w_bigcategory}>
+                            <select className='categoryselect' name='w_bigcategory' onChange={onChange} value={formData.w_bigcategory}>
                                 <option value="coffee">coffee</option>
                                 <option value="food">food</option>
                                 <option value="product">product</option>
@@ -78,7 +99,7 @@ const Writepage = () => {
                         <tr>                   
                             {formData.w_bigcategory === "coffee" ?
                             <><td>Coffee Category</td> 
-                            <select name='w_category' onChange={onChange} value={formData.w_category}>
+                            <select className='categoryselect2' name='w_category' onChange={onChange} value={formData.w_category}>
                                 <option value="">선택해주세요</option>
                                 <option value="콜드 브루">콜드 브루</option>
                                 <option value="브루드 커피">브루드 커피</option>
@@ -90,10 +111,55 @@ const Writepage = () => {
                                 <option value="티(티바나)">티(티바나)</option>
                             </select></> : null }
                         </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "coffee" ?
+                            <><td>Capacity</td>
+                            <td><input type="text" name="w_capacity" 
+                            value={formData.w_capacity}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "coffee" ?
+                            <><td>Amount</td>
+                            <td><input type="text" name="w_amount" 
+                            value={formData.w_amount}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "coffee" ?
+                            <><td>Fat</td>
+                            <td><input type="text" name="w_fat" 
+                            value={formData.w_fat}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "coffee" ?
+                            <><td>Sugars</td>
+                            <td><input type="text" name="w_sugars" 
+                            value={formData.w_sugars}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "coffee" ?
+                            <><td>Caffeine</td>
+                            <td><input type="text" name="w_caffeine" 
+                            value={formData.w_caffeine}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
                         <tr>
                             {formData.w_bigcategory === "food" ? 
                             <><td>Food Category</td>
-                            <select name='w_category' onChange={onChange} value={formData.w_category}>
+                            <select className='categoryselect3' name='w_category' onChange={onChange} value={formData.w_category}>
                                 <option value="">선택해주세요</option>
                                 <option value="브레드">브레드</option>
                                 <option value="케이크">케이크</option>
@@ -104,10 +170,46 @@ const Writepage = () => {
                                 <option value="아이스크림">아이스크림</option>
                             </select></> : null }
                         </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "food" ?
+                            <><td>Capacity</td>
+                            <td><input type="text" name="w_capacity" 
+                            value={formData.w_capacity}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "food" ?
+                            <><td>Amount</td>
+                            <td><input type="text" name="w_amount" 
+                            value={formData.w_amount}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "food" ?
+                            <><td>Fat</td>
+                            <td><input type="text" name="w_fat" 
+                            value={formData.w_fat}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
+                        <tr className='detailwritepage'>                   
+                        {formData.w_bigcategory === "food" ?
+                            <><td>Sugars</td>
+                            <td><input type="text" name="w_sugars" 
+                            value={formData.w_sugars}
+                            onChange={onChange}
+                            /></td>
+                            </> : null }
+                        </tr>
                         <tr>
                             {formData.w_bigcategory === "product" ? 
                             <><td>Product Category</td>
-                            <select name='w_category' onChange={onChange} value={formData.w_category}>
+                            <select className='categoryselect4' name='w_category' onChange={onChange} value={formData.w_category}>
                                 <option value="">선택해주세요</option>
                                 <option value="머그">머그</option>
                                 <option value="글라스">글라스</option>
@@ -120,12 +222,13 @@ const Writepage = () => {
                         <tr>
                             {formData.w_bigcategory === "card" ? 
                             <><td>Card Category</td>
-                            <select name='w_category' onChange={onChange} value={formData.w_category}>
+                            <select className='categoryselect2' name='w_category' onChange={onChange} value={formData.w_category}>
                                 <option value="">선택해주세요</option>
                                 <option value="실물카드">실물카드</option>
                                 <option value="AW GIFT 카드">AW GIFT 카드</option>
                             </select></> : null }
                         </tr>
+
                         <tr>
                             <td>Img</td>
                             <td>
@@ -146,8 +249,16 @@ const Writepage = () => {
                                 /> 
                             </td>
                         </tr>
-                        <tr className='buttonar'>
-                            <td colSpan={2}>
+                        <tr>
+                            <td>Info</td>
+                            <td>
+                                <textarea name="w_desc"
+                                value={formData.w_desc} onChange={onChange}
+                                />
+                            </td>
+                        </tr>
+                        <tr >
+                            <td colSpan={2} className='buttonar'>
                                 <button className='ADD' type="submit">ADD</button>
                                 <button className='RESET' type="reset">RESET</button>
                             </td>
@@ -155,6 +266,7 @@ const Writepage = () => {
                     </tbody>
                 </table>
             </form>
+            </div>
         </div>
     );
 };

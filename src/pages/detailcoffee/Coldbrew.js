@@ -9,9 +9,9 @@ import Coldbrewitem from './Coldbrewitem';
 
 
 
-const Coldbrew = () => {
+const Coldbrew = ({text}) => {
     const CPSData = async () => {
-    const data = await axios.get(`${API_URL}/AW/coldbrew`);
+    const data = await axios.get(`${API_URL}/AW/${text}`);
     return data;
     }
     const {loading, data, error} = useSelector(state=>state.special.specialss);

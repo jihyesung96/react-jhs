@@ -6,9 +6,9 @@ import { API_URL } from '../../config/apiurl';
 import { getAccessory } from '../../modules/product';
 import Accessoryitem from './Accessoryitem';
 
-const Accessory = () => {
+const Accessory = ({text}) => {
     const PRODUCTSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/accessory`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.product.accessory);

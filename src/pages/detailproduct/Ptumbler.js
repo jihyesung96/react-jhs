@@ -6,9 +6,9 @@ import { API_URL } from '../../config/apiurl';
 import { getPtumbler } from '../../modules/product';
 import Ptumbleritem from './Ptumbleritem';
 
-const Ptumbler = () => {
+const Ptumbler = ({text}) => {
     const PRODUCTSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/ptumbler`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.product.ptumbler);

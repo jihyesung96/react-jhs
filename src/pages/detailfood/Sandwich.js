@@ -9,9 +9,9 @@ import Sandwichitem from './Sandwichitem';
 
 
 
-const Sandwich = () => {
+const Sandwich = ({text}) => {
     const FOODSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/sandwich`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.food.sandwich);

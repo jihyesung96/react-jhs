@@ -7,9 +7,9 @@ import { getGlass } from '../../modules/product';
 import Glassitem from './Glassitem';
 
 
-const Glass = () => {
+const Glass = ({text}) => {
     const PRODUCTSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/glass`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.product.glass);

@@ -65,12 +65,12 @@
     border-radius: 3px;
     margin-left: 998px;
 }
-td{
+.td{
     height: 20%;
     width: 15.1212%;
 }
 
- th{
+.td > th{
     width: 3.1212%;
     height: 8%;
     padding: 15px 0 15px 20px;
@@ -80,7 +80,7 @@ td{
     text-align: left;
     border-bottom: 1px solid #333333;
 }
-tr > td{
+.td >tr > td{
     padding: 15px 0 15px 20px;
     font-size: 14px;
     color: #666666;

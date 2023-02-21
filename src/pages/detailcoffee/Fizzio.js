@@ -10,9 +10,9 @@ import Fizzioitem from './Fizzioitem';
 
 
 
-const Fizzio = () => {
+const Fizzio = ({text}) => {
     const CPData = async () => {
-    const data = await axios.get(`${API_URL}/AW/fizzio`);
+    const data = await axios.get(`${API_URL}/AW/${text}`);
     return data;
     }
     CPData();

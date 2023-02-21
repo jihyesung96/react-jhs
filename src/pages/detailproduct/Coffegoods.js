@@ -6,9 +6,9 @@ import { API_URL } from '../../config/apiurl';
 import { getCoffegoods } from '../../modules/product';
 import Coffegoodsitem from './Coffegoodsitem';
 
-const Coffegoods = () => {
+const Coffegoods = ({text}) => {
     const PRODUCTSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/coffegoods`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.product.coffegoods);

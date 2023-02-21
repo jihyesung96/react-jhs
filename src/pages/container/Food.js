@@ -49,13 +49,13 @@ const onChange = (e) => {
                         <li><input type="checkbox" onChange={()=>setFood6(!food6)}/><label>아이스크림</label></li>
                     </ul>
                     <div className='menuview'>
-                        { food && <Bread/> }
-                        { food1 && <Cake/>}
-                        { food2 && <Sandwich/>}
-                        { food3 &&<Foods/>}
-                        { food4 && <Fruit/> }
-                        { food5 && <Snack/> }
-                        { food6 && <Icecream/> }
+                        { food && <Bread text="브레드"/> }
+                        { food1 && <Cake text="케이크"/>}
+                        { food2 && <Sandwich text="샌드위치 & 샐러드"/>}
+                        { food3 &&<Foods text="따뜻한 푸드"/>}
+                        { food4 && <Fruit text="과일 & 요거트"/> }
+                        { food5 && <Snack text="스낵 & 미니 디저트"/> }
+                        { food6 && <Icecream text="아이스크림"/> }
                     </div>
                 </div>
 

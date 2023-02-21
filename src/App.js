@@ -9,6 +9,7 @@ import Product from './pages/container/Product';
 import LookOne from './pages/detaillook/LookOne';
 import LookTwo from './pages/detaillook/LookTwo';
 import Menu from './pages/detailmain/Menu';
+import DetailView from './pages/DetailView';
 import Magazine from './pages/Magazine';
 import Main from './pages/Main';
 import Findid from './pages/member/Findid';
@@ -35,9 +36,8 @@ function App() {
         <Route path='/Join' element={<Join/>}/>
         <Route path='/Findid' element={<Findid/>}/> 
         <Route path='/Findpass' element={<Findpassword/>}/>
-        <Route path='/Writecoffee' element={<WriteCoffee/>}/>
-        <Route path='/Writefood' element={<Writefood/>}/>    
-        <Route path='/Writeproduct' element={<Writeproduct/>}/>
+        <Route path='/Write' element={<Writepage/>}/>
+        <Route path='/Coffee/:no' element={<DetailView/>}/>
         <Route path='/Magazine' element={<Magazine/>}/>   
         <Route path='/LookOne' element={<LookOne/>}/>   
         <Route path='/LookTwo' element={<LookTwo/>}/>

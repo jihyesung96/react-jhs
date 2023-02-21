@@ -8,9 +8,9 @@ import Fooditem from './Fooditem';
 
 
 
-const Foods = () => {
+const Foods = ({text}) => {
     const FOODSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/food`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.food.food);

@@ -34,7 +34,7 @@ const LookTwo = () => {
                         <table>
                             <tbody>
                                 <td className='td'>
-                                    <tr>
+                                    <tr className='tr_one'>
                                         <th>윗글</th>
                                         <td>2월 14일, 팀프로젝트 종료 출시 </td>
                                     </tr>

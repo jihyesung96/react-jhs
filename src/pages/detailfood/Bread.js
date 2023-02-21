@@ -6,9 +6,9 @@ import { API_URL } from '../../config/apiurl';
 import { getBread } from '../../modules/food';
 import Breaditem from './Breaditem';
 
-const Bread = () => {
+const Bread = ({text}) => {
         const FOODSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/bread`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.food.bread);

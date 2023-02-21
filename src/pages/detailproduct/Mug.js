@@ -6,9 +6,9 @@ import { API_URL } from '../../config/apiurl';
 import { getMug } from '../../modules/product';
 import Mugitem from './Mugitem';
 
-const Mug = () => {
+const Mug = ({text}) => {
     const PRODUCTSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/mug`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.product.mug);

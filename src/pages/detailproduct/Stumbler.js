@@ -6,9 +6,9 @@ import { API_URL } from '../../config/apiurl';
 import { getStumbler } from '../../modules/product';
 import Stumbleritem from './Stumbleritem';
 
-const Stumbler = () => {
+const Stumbler = ({text}) => {
     const PRODUCTSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/stumbler`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.product.stumbler);

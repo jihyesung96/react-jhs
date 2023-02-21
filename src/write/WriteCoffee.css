@@ -2,22 +2,27 @@
     margin: 20px auto;
     width: 100%;
     max-width: 1000px;
-    height: 500px;
+    height: auto;
     border: 2px solid #ccc;
     border-radius: 5px;
+    padding-bottom: 80px;
 }
 
 #Writecoffee form{
     box-shadow: 5px 5px 5px 5px gray;
     border-radius: 8px;
     width: 70%;
-    height: 300px;
+    height: auto;
     margin-left: 150px;
     margin-top: 50px;
+    padding-left: 15%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-#Writecoffee tr{
-    border-bottom: 1px solid #ccc;
+
+.detailwritepage{
+    width: 100%;
 }
 
 #Writecoffee table{
@@ -26,7 +31,7 @@
 
 #Writecoffee td{
     font-size: 23px;
-    padding: 10px 60px;
+    
 }
 
 #Writecoffee input{
@@ -39,7 +44,7 @@
     width: 100px;
     height: 40px;
     font-size: 18px;
-    margin-left: 140px;
+    margin-left: 60px;
     color: white;
     background-color: #046241;
     border: 2px solid #046241;
@@ -75,4 +80,26 @@
 }
 .editpassword{
     margin-top: 20px;
+}
+.writetable{
+    height: auto;
+    width: 70%;
+}
+.categoryselect{
+    padding: 2px 64px;
+}
+.detailwritepage >tr  {
+    width: 100%;
+}
+.categoryselect2{
+    padding: 2px 49px;
+}
+.categoryselect3{
+    padding: 2px 29px;
+}
+.categoryselect4{
+    padding: 2px 32px;
+}
+.buttonar{
+    padding-top: 20px;
 }

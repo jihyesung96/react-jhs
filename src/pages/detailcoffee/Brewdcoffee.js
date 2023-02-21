@@ -9,9 +9,9 @@ import Brewdcoffeewitem from './Brewdcoffeewitem';
 
 
 
-const Brewdcoffee = () => {
+const Brewdcoffee = ({text}) => {
     const CPData = async () => {
-    const data = await axios.get(`${API_URL}/AW/brewdcoffee`);
+    const data = await axios.get(`${API_URL}/AW/${text}`);
     return data;
     }
     CPData();

@@ -7,9 +7,9 @@ import { getSnack } from '../../modules/food';
 import Snackitem from './Snackitem';
 
 
-const Snack = () => {
+const Snack = ({text}) => {
         const FOODSData = async () => {
-        const data = await axios.get(`${API_URL}/AW/snack`);
+        const data = await axios.get(`${API_URL}/AW/${text}`);
         return data;
         }
         const {loading, data, error} = useSelector(state=>state.food.snack);

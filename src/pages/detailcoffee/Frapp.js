@@ -8,9 +8,9 @@ import Frappitem from './Frappitem';
 
 
 
-const Frapp = () => {
+const Frapp = ({text}) => {
     const CPData = async () => {
-    const data = await axios.get(`${API_URL}/AW/frapp`);
+    const data = await axios.get(`${API_URL}/AW/${text}`);
     return data;
     }
     CPData();
