@@ -6,9 +6,9 @@ const Sandwichitem = ({item}) => {
     return (
         <ul className='coffeecss'>
             <li className='coldbrewitem'>
-                {item.map(item=><div key={`${item.f_no}`}><Link to={`/Coffee/${item.w_no}`}><img src={`${API_URL}/upload/${item.f_img}`} alt=""/></Link>
-                <p className='cpname'>{item.f_name}</p>
-                <p className='cpprice'>{item.f_price}원</p></div>)}
+                {item.map(item=><div key={`${item.w_no}`}><Link to={`/Coffee/${item.w_no}`}><img src={`${API_URL}/upload/${item.w_img}`} alt=""/></Link>
+                <p className='cpname'>{item.w_name}</p>
+                <p className='cpprice'>{item.w_price}원</p></div>)}
             </li>
         </ul>
     );

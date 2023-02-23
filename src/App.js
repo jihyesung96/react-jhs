@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import ClickColdbrew from './pages/container/Click/ClickColdbrew';
 import Coffee from './pages/container/Coffee';
-import Coffee1 from './pages/container/Coffee1';
 import Food from './pages/container/Food';
 import Product from './pages/container/Product';
 import LookOne from './pages/detaillook/LookOne';
@@ -30,7 +30,7 @@ function App() {
         <Route path='/Login' element={<Login/>}/> 
         <Route path='/Menu' element={<Menu/>}/>
         <Route path='/Coffee' element={<Coffee/>}/>
-        <Route path='/Coffee1' element={<Coffee1/>}/>
+        <Route path='/Coldbrew' element={<ClickColdbrew/>}/>
         <Route path='/Food' element={<Food/>}/> 
         <Route path='/Product' element={<Product/>}/> 
         <Route path='/Join' element={<Join/>}/>

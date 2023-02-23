@@ -10,7 +10,7 @@ const DetailHeader = ({isState1,isState2,isState3,isState4,isState5 }) => {
             <div id='menu'>
                         <div>
                             <ul>
-                                <li><Link to="/Coffee1">콜드 브루</Link></li>
+                                <li><Link to="/Coldbrew">콜드 브루</Link></li>
                                 <li>브루드 커피</li>
                                 <li>에스프레소</li>
                                 <li>프라푸치노</li>

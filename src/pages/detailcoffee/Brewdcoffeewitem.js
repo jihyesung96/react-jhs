@@ -3,7 +3,6 @@ import { API_URL } from '../../config/apiurl';
 import { Link } from 'react-router-dom';
 
 const Brewdcoffeewitem = ({item2}) => {
-    console.log(item2);
     return (
         <ul className='coffeecss2'>
             <li className='coldbrewitem'>

@@ -44,12 +44,12 @@ const onChange = (e) => {
                         <li><input type="checkbox" onChange={()=>setProduct5(!product5)}/><label>커피 용품</label></li>
                     </ul>
                     <div className='menuview'>
-                        { product && <Mug test="머그"/> }
-                        { product1 && <Glass test="글라스"/>}
-                        { product2 && <Ptumbler test="플라스틱 텀블러"/>}
-                        { product3 &&<Stumbler test="스테인리스 텀블러"/>}
-                        { product4 && <Accessory test="악세서리"/> }
-                        { product5 && <Coffegoods test="커피 용품"/> }
+                        { product && <Mug text="머그"/> }
+                        { product1 && <Glass text="글라스"/>}
+                        { product2 && <Ptumbler text="플라스틱 텀블러"/>}
+                        { product3 &&<Stumbler text="스테인리스 텀블러"/>}
+                        { product4 && <Accessory text="악세서리"/> }
+                        { product5 && <Coffegoods text="커피 용품"/> }
                     </div>
                 </div>
 

@@ -3,7 +3,6 @@ import { API_URL } from '../../config/apiurl';
 
 
 const Teaitem = ({item}) => {
-    console.log(item);
     return ( 
         <ul className='coffeecss'>
             <li className='coldbrewitem'>
